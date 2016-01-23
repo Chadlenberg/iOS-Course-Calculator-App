@@ -80,7 +80,7 @@
                                                 </constraints>
                                                 <state key="normal" image="8"/>
                                                 <connections>
-                                                    <action selector="onNumberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VjA-Yh-SvV"/>
+                                                    <action selector="onNumberPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3fN-vh-HZI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SH-7K-AeC" userLabel="9">
@@ -261,7 +261,6 @@
                     </view>
                     <connections>
                         <outlet property="CalkReadout" destination="3AF-lS-Nc3" id="bBN-vB-dSk"/>
-                        <outlet property="plusBtn" destination="2Q6-eZ-Xwc" id="IcA-KS-8cI"/>
                     </connections>
                 </viewController>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="25" id="q4M-Xh-VAg">

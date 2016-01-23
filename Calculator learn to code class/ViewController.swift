@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     var btnSound: AVAudioPlayer!
     
+    var runningNumber: String = ""
+    var leftValString = ""
+    var rightValString = ""
+    // Pick back up at 22 min 47 seconds in lecture.
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +40,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onNumberPressed(Button: UIButton!) {
-        
+        btnSound.play()
     }
 
 }
