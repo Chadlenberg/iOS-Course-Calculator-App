@@ -14,6 +14,10 @@
 		3A1F3ED81C52B2D6008B96D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F3ED61C52B2D6008B96D6 /* LaunchScreen.storyboard */; };
 		3A1F3EE31C52B2D6008B96D6 /* Calculator_learn_to_code_classTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F3EE21C52B2D6008B96D6 /* Calculator_learn_to_code_classTests.swift */; };
 		3A1F3EEE1C52B2D6008B96D6 /* Calculator_learn_to_code_classUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F3EED1C52B2D6008B96D6 /* Calculator_learn_to_code_classUITests.swift */; };
+		3A1F3EFC1C52BF5C008B96D6 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F3EFB1C52BF5C008B96D6 /* Minecraft.ttf */; };
+		3A1F3EFD1C52BF5C008B96D6 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F3EFB1C52BF5C008B96D6 /* Minecraft.ttf */; };
+		3A1F3EFE1C52BF5C008B96D6 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A1F3EFB1C52BF5C008B96D6 /* Minecraft.ttf */; };
+		3A2EB0011C532954006D17AB /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A2EB0001C532954006D17AB /* btn.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,8 @@
 		3A1F3EE91C52B2D6008B96D6 /* Calculator learn to code classUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Calculator learn to code classUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1F3EED1C52B2D6008B96D6 /* Calculator_learn_to_code_classUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator_learn_to_code_classUITests.swift; sourceTree = "<group>"; };
 		3A1F3EEF1C52B2D6008B96D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A1F3EFB1C52BF5C008B96D6 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		3A2EB0001C532954006D17AB /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		3A1F3EC11C52B2D5008B96D6 = {
 			isa = PBXGroup;
 			children = (
+				3A1F3EFB1C52BF5C008B96D6 /* Minecraft.ttf */,
+				3A2EB0001C532954006D17AB /* btn.wav */,
 				3A1F3ECC1C52B2D5008B96D6 /* Calculator learn to code class */,
 				3A1F3EE11C52B2D6008B96D6 /* Calculator learn to code classTests */,
 				3A1F3EEC1C52B2D6008B96D6 /* Calculator learn to code classUITests */,
@@ -231,7 +239,9 @@
 			files = (
 				3A1F3ED81C52B2D6008B96D6 /* LaunchScreen.storyboard in Resources */,
 				3A1F3ED51C52B2D6008B96D6 /* Assets.xcassets in Resources */,
+				3A1F3EFC1C52BF5C008B96D6 /* Minecraft.ttf in Resources */,
 				3A1F3ED31C52B2D5008B96D6 /* Main.storyboard in Resources */,
+				3A2EB0011C532954006D17AB /* btn.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1F3EFD1C52BF5C008B96D6 /* Minecraft.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1F3EFE1C52BF5C008B96D6 /* Minecraft.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +494,7 @@
 				3A1F3EF41C52B2D6008B96D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A1F3EF51C52B2D6008B96D6 /* Build configuration list for PBXNativeTarget "Calculator learn to code classTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +503,7 @@
 				3A1F3EF71C52B2D6008B96D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A1F3EF81C52B2D6008B96D6 /* Build configuration list for PBXNativeTarget "Calculator learn to code classUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +512,7 @@
 				3A1F3EFA1C52B2D6008B96D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
