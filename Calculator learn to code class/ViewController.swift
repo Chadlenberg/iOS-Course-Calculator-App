@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     var runningNumber: String = ""
     var leftValString = ""
     var rightValString = ""
+    var result = ""
     var currentOperation: Operation = Operation.Empty
-    // Pick back up at 22 min 47 seconds in lecture.
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,8 +50,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onNumberPressed(Button: UIButton!) {
-        btnSound.play()
-        
+        playSound()
         runningNumber += "\(Button.tag)"
         CalkReadout.text = runningNumber
     }
@@ -64,21 +63,60 @@ class ViewController: UIViewController {
         processOperation(Operation.Multiply)
     }
     
-    @IBAction func onSubtractPressed(sender: AnyObject) {
-        processOperation(Operation.Subtract)
-    }
-   
-    @IBAction func onAddPressed(sender: UIButton) {
+    @IBAction func onAddPressed(sender: AnyObject) {
         processOperation(Operation.Add)
     }
-
-    @IBAction func onEqualsPressed(sender: AnyObject) {
-        processOperation(Operation.Equals)
+   
+    @IBAction func onSubtractPressed(sender: UIButton) {
+        processOperation(Operation.Subtract)
     }
+
+    @IBAction func onEqualsPressed(sender: UIButton) {
+        processOperation(currentOperation)
+    }
+   
     
     func processOperation(op: Operation) {
+        playSound()
         
+        if currentOperation != Operation.Empty {
+            if runningNumber != "" {
+                rightValString = runningNumber
+                runningNumber = ""
+                
+                if currentOperation == Operation.Multiply {
+                    result = "\(Double(leftValString)! * Double(rightValString)!)"
+                } else if currentOperation == Operation.Divide {
+                    result = "\(Double(leftValString)! / Double(rightValString)!)"
+                } else if currentOperation == Operation.Add {
+                    result = "\(Double (leftValString)! + Double(rightValString)!)"
+                } else if currentOperation == Operation.Subtract {
+                    result = "\(Double (leftValString)! - Double(rightValString)!)"
+                }
+                
+                CalkReadout.text = result
+                leftValString = result
+                rightValString = ""
+            
+                
+                currentOperation = op
+            } else {
+              currentOperation = op
+            }
+            
+            
+        }else {
+            //this is the first time an operator has been pressed
+            leftValString = runningNumber
+            runningNumber = ""
+            currentOperation = op
+            
+            
+        }
+    }
+    
+    func playSound() {
+    
+        btnSound.play()
     }
 }
-
-// 37:52 on vid
