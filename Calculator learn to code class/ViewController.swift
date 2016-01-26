@@ -25,9 +25,9 @@ class ViewController: UIViewController {
  
     var btnSound: AVAudioPlayer!
     
-    var runningNumber: String = ""
-    var leftValString = ""
-    var rightValString = ""
+    var runningNumber: String = "0"
+    var leftValString = "0"
+    var rightValString = "0"
     var result = ""
     var currentOperation: Operation = Operation.Empty
 
@@ -44,12 +44,12 @@ class ViewController: UIViewController {
             print(err.debugDescription)
         }
         
-        
-        
-        
     }
 
     @IBAction func onNumberPressed(Button: UIButton!) {
+        if runningNumber == "0" {
+            runningNumber = ""
+        }
         playSound()
         runningNumber += "\(Button.tag)"
         CalkReadout.text = runningNumber
@@ -74,13 +74,23 @@ class ViewController: UIViewController {
     @IBAction func onEqualsPressed(sender: UIButton) {
         processOperation(currentOperation)
     }
+    
+    @IBAction func onClearPressed(sender: UIButton) {
+        playSound()
+        if runningNumber != "0" {
+            clearRunningNumber()
+        } else {
+            clearAll()
+        }
+    }
    
+    
     
     func processOperation(op: Operation) {
         playSound()
         
         if currentOperation != Operation.Empty {
-            if runningNumber != "" {
+            if runningNumber != "" && runningNumber != "0" {
                 rightValString = runningNumber
                 runningNumber = ""
                 
@@ -106,7 +116,6 @@ class ViewController: UIViewController {
             
             
         }else {
-            //this is the first time an operator has been pressed
             leftValString = runningNumber
             runningNumber = ""
             currentOperation = op
@@ -116,7 +125,30 @@ class ViewController: UIViewController {
     }
     
     func playSound() {
-    
+        if btnSound.playing{
+            btnSound.stop()
+        }
         btnSound.play()
+    }
+    
+    func clearRunningNumber() {
+        resetRunningNumber()
+        resetReadout()
+        currentOperation = Operation.Empty
+    }
+    
+    func clearAll() {
+        leftValString = "0"
+        rightValString = "0"
+        currentOperation = Operation.Empty
+        resetReadout()
+    }
+   
+    func resetRunningNumber() {
+        runningNumber = "0"
+    }
+    
+    func resetReadout() {
+        CalkReadout.text = "0"
     }
 }

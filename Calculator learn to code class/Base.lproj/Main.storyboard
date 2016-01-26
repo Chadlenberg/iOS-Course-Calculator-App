@@ -56,7 +56,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-18-b0O">
-                                <rect key="frame" x="184" y="150" width="233" height="333"/>
+                                <rect key="frame" x="184" y="150" width="233" height="390"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zI3-eL-qrL">
                                         <rect key="frame" x="0.0" y="0.0" width="233" height="61"/>
@@ -243,6 +243,13 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmX-Xe-paN" userLabel="clearBtn">
+                                        <rect key="frame" x="0.0" y="340" width="233" height="50"/>
+                                        <state key="normal" image="clear"/>
+                                        <connections>
+                                            <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cM2-1J-Dp8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AF-lS-Nc3">
@@ -262,6 +269,7 @@
                             <constraint firstItem="lF1-18-b0O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vx-9i-aeA"/>
                             <constraint firstAttribute="bottom" secondItem="V5t-5W-fOT" secondAttribute="bottom" id="9h5-E0-2Ro"/>
                             <constraint firstItem="j8l-a9-9dW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EdY-kS-WMx"/>
+                            <constraint firstItem="lF1-18-b0O" firstAttribute="bottom" secondItem="s5N-gT-jBS" secondAttribute="bottom" id="G9z-6O-WvE"/>
                             <constraint firstItem="4LG-4V-Mzj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="HYb-pK-5fi"/>
                             <constraint firstItem="3AF-lS-Nc3" firstAttribute="top" secondItem="j8l-a9-9dW" secondAttribute="top" constant="25" id="O9F-I2-DKq"/>
                             <constraint firstItem="V5t-5W-fOT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Wfd-XA-mw1"/>
@@ -270,6 +278,7 @@
                             <constraint firstItem="4LG-4V-Mzj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-45" id="axt-8N-21Z"/>
                             <constraint firstItem="j8l-a9-9dW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f7e-us-Dn3"/>
                             <constraint firstAttribute="trailing" secondItem="V5t-5W-fOT" secondAttribute="trailing" id="lIO-Ai-ypO"/>
+                            <constraint firstItem="lF1-18-b0O" firstAttribute="top" secondItem="s5N-gT-jBS" secondAttribute="top" id="mhQ-Ed-uKk"/>
                             <constraint firstItem="lF1-18-b0O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="35" id="msZ-NZ-xlS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4LG-4V-Mzj" secondAttribute="trailing" constant="-20" id="smp-cJ-bMI"/>
                         </constraints>
@@ -329,6 +338,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>
